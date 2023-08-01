@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card-imgs {
+  transition: 500ms ease;
+}
+
+.card-imgs:is( :hover, :focus-within ){
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 8px;
+
+}
+
+.footer {
+  text-align: center;
+  height: 50px;
+  padding-top: 12px;
+  margin-top: 60px;
+}
+
+@media (max-width: 992px) {
+  .card-imgs {
+    height: 230px;
+  }
+}
