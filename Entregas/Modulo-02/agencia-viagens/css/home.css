@@ -1,6 +1,7 @@
 .carousel-item img {
   object-fit: cover;
   height: 480px;
+  cursor: pointer;
 }
 
 .carousel-text {
@@ -13,9 +14,20 @@
   font-size: 5.6vw;
   padding: 6px;
   border-radius: 50%;
-  background-color: rgba(231, 231, 231, 0.493)
+  background-color: rgba(231, 231, 231, 0.493);
 }
 
+.cards-price {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 3px 7px;
+  border-radius: 2px;
+  background-color: rgb(8, 247, 8);
+  color: black;
+  font-weight:500;
+}
 
 .nacional-title {
   background-image: linear-gradient(to right,green , #ffff00, blue);
