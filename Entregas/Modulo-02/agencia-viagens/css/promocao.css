@@ -14,7 +14,7 @@ main {
 }
 
 .plano-container {
-  background-image: url("/imagens/planoBackground.jpg");
+  background-image: url("../imagens/planoBackground.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   margin: auto;
