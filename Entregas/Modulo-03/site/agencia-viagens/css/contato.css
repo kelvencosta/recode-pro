@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(33, 37, 41);
+}
+
+.form {
+  padding-top: 85px;
+  width: 600px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.contact {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.input-group-text {
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 350px;
+  }
+
+  .contact {
+    font-size: 18px;
+  }
+
+  .input-group-text {
+    height: 41px;
+  }
+}
