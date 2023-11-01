@@ -1,0 +1,48 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.voltar{
+    border-radius: 30px;
+    padding: 6px 13px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    margin-left: 10px;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 3px 10px;
+	background-color: rgb(112, 78, 207);
+	box-shadow: 0px 2px 2px 0px rgba(115, 75, 224, 0.445);
+}
+
+.img-perfil {
+	border-radius: 50%;
+	border: 2px solid white;
+} 
+
+.div-img {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.container-aside {
+	justify-content: center;
+	display: flex;
+	margin-top: 5px;
+}
+
+.card  {
+	box-shadow: 1px 2px 10px rgba(0, 0, 250, 0.137);
+	border: 1px solid rgb(112, 78, 207);
+}
