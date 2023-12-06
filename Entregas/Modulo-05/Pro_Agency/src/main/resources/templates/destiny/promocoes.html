@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/imagens/pro_agency_k5D_icon.ico" type="image/x-icon">
+	<title>Promoções</title>
+	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/promocao.css">
+</head>
+
+<body>
+	<!-- navbar -->
+	<header>
+		<nav th:replace="~{fragments/_navbar :: nav}"></nav>
+	</header>
+
+	<main>
+		<section class="plano-container">
+
+			<div class="plano-title">
+				<h1 class="text-white">Plano <span class="text-yellow">1.000</span></h3>
+					<h5 class="text-yellow h5">
+						Receba 25.500 MILHAS em 12 meses!
+					</h5>
+			</div>
+
+			<div class="plano-title">
+				<h5 class="text-white">1.000 milhas por mês</h3>
+			</div>
+
+			<div class="plano-items">
+				<div>
+					<p class="text-white">Mensal</p>
+				</div>
+
+				<div>
+					<p class="text-yellow">R$ 42,00 ../mês</p>
+				</div>
+
+				<div>
+					<button type="button" class="btn btn-warning">Quero assinar</button>
+				</div>
+			</div>
+
+			<div class="plano-items">
+				<div>
+					<p class="text-white">Anual Parcelado</p>
+					<p class="text-light fw-light">em até 12x</p>
+				</div>
+
+				<div>
+					<p class="desconto">5% off</p>
+					<p class="text-light fw-light">De: <span class="line-through">R$ 42,00 /mês</span></p>
+					<p class="text-yellow">Por: Até 12x de R$ 39,90</p>
+				</div>
+
+				<div>
+					<button type="button" class="btn btn-warning">Quero assinar</button>
+				</div>
+			</div>
+
+			<div class="plano-items">
+				<div>
+					<p class="text-white">Anual À Vista</p>
+				</div>
+
+				<div>
+					<p class="desconto">10% off</p>
+					<p class="text-light fw-light">De: <span class="line-through">De: R$ 504,00 /ano</span></p>
+					<p class="text-yellow">Por: R$ 453,60 /ano</p>
+				</div>
+
+				<div>
+					<button type="button" class="btn btn-warning">Quero assinar</button>
+				</div>
+			</div>
+		</section>
+
+		<h2 class="fw-bold promocao-title">
+			Voos com até 50% de desconto
+		</h2>
+
+		<section class="row row-cols-2 row-cols-md-3 g-4">
+			<div th:each="destiny : ${locaisPromocionais}" class="col">
+				<div class="card">
+					<img class="card-imgs card-img-top" th:src="${destiny.imgUrl}">
+					<div class="card-body">
+						<h4 class="card-title fw-bold" th:text="${destiny.name}"></h4>
+						<p class="card-text" th:text="${destiny.description}"></p>
+						<span class="cards-deconto">-50%</span>
+						<a class="btn btn-info btn-sm btn-card" th:href="@{/destiny/edit/{id}(id=${destiny.id})}">Editar</a>
+						<a class="btn btn-danger btn-sm btn-card" th:href="@{/destiny/delete/{id}(id=${destiny.id})}">Excluir</a>
+						<a class="btn btn-success btn-sm btn-card" th:href="@{/reserve/register/{id}(id=${destiny.id})}">Reserva</a>
+						<span class="cards-price">R$<span th:text="${#numbers.formatDecimal(destiny.price, 2, 'POINT',2, 'COMMA')}"></span></span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+	<footer th:replace="~{fragments/_footer :: footer}"></footer>
+
+	<script src="script/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

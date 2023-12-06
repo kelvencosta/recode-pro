@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PRO Agency</title>
+	<link rel="shortcut icon" href="imagens/pro_agency_k5D_icon.ico" type="image/x-icon">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+	<header>
+		<!-- navbar -->
+
+		<nav th:replace="~{fragments/_navbar :: nav}"></nav>
+
+		<!-- carousel -->
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="imagens/rio-de-janeiro.jpg" class="d-block w-100" alt="rio de janeiro">
+					<div class="carousel-text fw-bold">
+						<div>Rio de Janeiro</div>
+						<div class="pagamento">
+							<sup>10x</sup> R$70
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="imagens/disney.jpg" class="d-block w-100" alt="disney">
+					<div class="carousel-text fw-bold">
+						<div>Disney</div>
+						<div class="pagamento">
+							<sup>10x</sup> R$130
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="imagens/paris.jpg" class="d-block w-100" alt="paris">
+					<div class="carousel-text fw-bold">
+						<div>Paris</div>
+						<div class="pagamento">
+							<sup>10x</sup> R$200
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<main>
+
+
+		<div class="bg-dark btn-add-card">
+			<a class="btn fw-bold text-black btn-warning fs-6" 
+			th:href="@{/register/destiny}">Adicionar Card</a>
+		</div>
+
+		<!-- section nacional CARDS -->
+		<h2 class="fw-bold nacional-title">
+			Nacional <img height="35px" src="imagens/brazi-flag.png"> - viagens e tour
+		</h2>
+
+		<section class="row row-cols-2 row-cols-md-3 g-4">
+
+			<div th:each="destiny : ${locaisNacionais}" class="col">
+				<div class="card">
+					<img height="300px" class="card-imgs card-img-top" th:src="${destiny.imgUrl}">
+					<div class="card-body">
+						<h4 class="card-title fw-bold" th:text="${destiny.name}"></h4>
+						<p class="card-text" th:text="${destiny.description}"></p>
+						<a class="btn btn-info btn-sm btn-card" th:href="@{/destiny/edit/{id}(id=${destiny.id})}">Editar</a>
+						<a class="btn btn-danger btn-sm btn-card" th:href="@{/destiny/delete/{id}(id=${destiny.id})}">Excluir</a>
+						<a class="btn btn-success btn-sm btn-card" th:href="@{/reserve/register/{id}(id=${destiny.id})}">Reserva</a>
+						<span class="cards-price">R$<span th:text="${#numbers.formatDecimal(destiny.price, 2, 'POINT',2, 'COMMA')}"></span></span>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!--section internacional CARDS -->
+
+		<h2 class="fw-bold internacional-title">
+			Internacional <img height="45px" src="imagens/global-flag.png"> - viagens e tour
+		</h2>
+
+		<section class="row row-cols-2 row-cols-md-3 g-4">
+			
+			<div th:each="destiny : ${locaisInternacionais}" class="col">
+				<div class="card">
+					<img height="300px" class="card-imgs card-img-top" th:src="${destiny.imgUrl}">
+					<div class="card-body">
+						<h4 class="card-title fw-bold" th:text="${destiny.name}"></h4>
+						<p class="card-text" th:text="${destiny.description}"></p>
+						<a class="btn btn-info btn-sm" th:href="@{/destiny/edit/{id}(id=${destiny.id})}">Editar</a>
+						<a class="btn btn-danger btn-sm" th:href="@{/destiny/delete/{id}(id=${destiny.id})}">Excluir</a>
+						<a class="btn btn-success btn-sm" th:href="@{/reserve/register/{id}(id=${destiny.id})}">Reserva</a>
+						<span class="cards-price">R$<span th:text="${#numbers.formatDecimal(destiny.price, 2, 'POINT',2, 'COMMA')}"></span></span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer th:replace="~{fragments/_footer :: footer}"></footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+		</script>
+
+</body>
+
+</html>

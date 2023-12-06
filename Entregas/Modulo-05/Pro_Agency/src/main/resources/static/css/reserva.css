@@ -1,0 +1,124 @@
+main {
+  padding-top: 50px;
+}
+
+label {
+  font-weight: bold;
+}
+
+body {
+  background-color: rgb(38, 42, 46);
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.title-container h1 {
+  font-size: 35px;
+}
+
+.container-info {
+  padding: 30px;
+}
+
+.flex {
+  display: flex;  
+  justify-content: space-between;
+}
+
+.margin{
+  margin-bottom: 15px;
+}
+
+.card-destino {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  width: 849px;
+}
+
+.card-destino img {
+  border-radius: 10px 0px 0px 10px;
+  margin-right: 10px;
+}
+
+.cartao-label,
+.codigo-label {
+    display: block;
+    margin-top: 10px;
+  }
+
+.cartao-input,
+.codigo-input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.reservar-div{
+  margin-top: 25px;
+}
+
+
+.button {
+  width: 380px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  padding: 0;
+}
+
+.valor {
+  color: blue;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.inputs  {
+  border: 1px solid rgb(150, 149, 149);
+  width: 380px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+input {
+  border: 0px;
+}
+
+@media (max-width: 900px) {
+  .card-destino {
+    flex-direction: column;
+    width: 440px;
+  }
+  .card-destino img {
+    border-radius: 10px 10px 0px 0px;
+  }
+  .reservar-div img {
+    margin-left: 0px;
+    width: 270px;
+  }
+  .img-place{
+    width: 100%;
+  }
+  .info-reserva{
+    padding-left: 2px;
+  }
+  .reservar-div{
+    margin-top: 10px;
+  }
+  .button {
+    margin-top: 10px;
+    width: 150px;
+  }
+  .inputs {
+    width: 430px;
+  }
+}

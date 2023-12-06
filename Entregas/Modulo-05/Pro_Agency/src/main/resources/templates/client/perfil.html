@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="/imagens/pro_agency_k5D_icon.ico" type="image/x-icon">
+	<title>Perfil</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/perfil.css">
+</head>
+
+<body>
+
+	<header>
+		<nav class="nav">
+			<div class="div-img">
+				<img src="/imagens/perfil.svg" class="img-perfil">
+				<h2 class="h3 text-white" th:text="${client.name}"></h2>
+				<a th:href="@{/}" class="btn btn-block voltar"> Voltar</a>
+			</div>
+
+			<div>
+				<a th:href="@{/client/edit/{id}(id=${client.id})}" class="btn btn-info text-white">Editar</a>
+				<a th:href="@{/client/delete/{id}(id=${client.id})}"
+					th:onclick="|return confirm('Deseja Excluir?');|" class="btn btn-danger">Excluir</a>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section>
+			<aside class="container-aside">
+				<div class="col-lg-6">
+					<div class="card mb-4">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-sm-6">
+									<p class="mb-5 h5">CPF</p>
+								</div>
+								<div class="col-sm-6">
+									<p class="text-muted mb-5 h6" th:text="${client.cpf}"></p>
+								</div>
+							</div>
+							<hr class="border border-info">
+							<div class="row">
+								<div class="col-sm-6">
+									<p class="mb-5 h5">RG</p>
+								</div>
+								<div class="col-sm-6">
+									<p class="text-muted mb-5 h6" th:text="${client.rg}"></p>
+								</div>
+							</div>
+							<hr class="border border-info">
+							<div class="row">
+								<div class="col-sm-6">
+									<p class="mb-5 h5">Telefone</p>
+								</div>
+								<div class="col-sm-6">
+									<p class="text-muted mb-5 h6" th:text="${client.tel}"></p>
+								</div>
+							</div>
+							<hr class="border border-info">
+							<div class="row">
+								<div class="col-sm-6">
+									<p class="mb-5 h5">Email</p>
+								</div>
+								<div class="col-sm-6">
+									<p class="text-muted mb-5 h6" th:text="${client.email}"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</section>
+	</main>
+</body>
+</html>

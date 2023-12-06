@@ -1,0 +1,38 @@
+<nav th:fragment="nav" class="navbar bg-dark navbar-expand-lg">
+	<div class="container-fluid">
+		<a class="navbar-brand text-decoration-underline text-white fs-5" th:href="@{/}">Pro Agency</a>
+		<button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link fs-6 text-white" aria-current="page" th:href="@{/}">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link fs-6 text-white" th:href="@{/promocoes}">Promoções</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link fs-6 text-white" th:href="@{/client/register}">Cadastro</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link fs-6 dropdown-toggle text-warning" href="#" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Mais
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" th:href="@{/contact}">contato</a></li>
+						<li><a class="dropdown-item" th:href="@{/client/perfil}">perfil</a></li>
+
+					</ul>
+				</li>
+			</ul>
+			<form class="d-flex" role="search">
+				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-primary" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+</nav>
