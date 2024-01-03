@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
+
+.section {
+  font-family: Nunito;
+  font-weight: 600;
+}
+
+.main .p {
+  margin: 0;
+}
+
+.main {
+  padding-top: 56px;
+  padding-bottom: 70px;
+}
+
+.planoContainer {
+  background-image: url("/imagens/planoBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: auto;
+  width: 100%;
+  padding: 30px;
+  background-color: rgb(33, 37, 41);
+}
+
+.planoTitle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.planotitle h1 {
+  margin-inline-end: 20px;
+}
+
+.planoItems {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin: auto;
+  margin-top: 30px; 
+}
+
+.desconto{
+  padding: 1px 10px;
+  width: 60px;
+  background-color: #fce200;
+  border-radius: 5px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+}
+
+.textYellow {
+  color: #fce200;
+}
+
+.h5 {
+  padding-left: 15px;
+  border-left: 2px #fce200 solid;
+}
+
+.promocaoTitle {
+  background-color: #fce200;
+  height: 50px;
+  padding-top: 5px;
+}
+
+.cardsDeconto {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #fce200;
+  padding: 2px 10px;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .planoItems{
+    flex-direction: column;
+  }
+  
+  .planoItems  p{
+    margin-bottom: 1px;
+  }
+
+  .planocontainer {
+    background-color: #fce200;
+  }
+}

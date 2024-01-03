@@ -1,0 +1,122 @@
+.div {
+  padding-top: 30px;
+  background-color: rgb(38, 42, 46);
+  height: 100vh;
+}
+
+.section label {
+  font-weight: bold;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.titleContainer h1 {
+  font-size: 35px;
+}
+
+.containerInfo {
+  padding: 30px;
+}
+
+.cardDestino {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  width: 849px;
+}
+
+.cardDestino img {
+  border-radius: 10px 0px 0px 10px;
+  margin-right: 10px;
+}
+
+.cartaoLabel,
+.codigoLabel {
+  display: block;
+  margin-top: 10px;
+}
+
+.cartaoInput,
+.codigoInput {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.reservarDiv {
+  margin-top: 25px;
+}
+
+
+.button {
+  width: 380px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.valor {
+  color: blue;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.inputs {
+  border: 1px solid rgb(150, 149, 149);
+  width: 380px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.section input {
+  border: 0px;
+}
+
+@media (max-width: 900px) {
+  .div {
+    padding-bottom: 30px;
+    height: auto;
+  }
+
+  .cardDestino {
+    flex-direction: column;
+    width: 440px;
+  }
+
+  .cardDestino img {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .reservarDiv img {
+    margin-left: 0px;
+    width: 270px;
+  }
+
+  .imgPlace {
+    width: 100%;
+  }
+
+  .infoReserva {
+    padding-left: 2px;
+  }
+
+  .reservarDiv {
+    margin-top: 10px;
+  }
+
+  .button {
+    margin-top: 10px;
+    width: 150px;
+  }
+
+  .inputs {
+    width: 430px;
+  }
+}

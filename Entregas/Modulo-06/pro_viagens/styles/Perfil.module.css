@@ -1,0 +1,27 @@
+.section {
+	padding-top: 70px;
+	height: 100vh;
+  background-color: rgb(112, 78, 207);}
+
+.containerAside {
+	justify-content: center;
+	display: flex;
+}
+
+.card  {
+	box-shadow: 1px 2px 10px rgb(78, 207, 179);
+	border: 1px solid rgb(78, 207, 179);
+}
+
+.btns {
+	display: flex;
+	gap: 10px;
+}
+
+@media (max-width: 991px) {
+  .section {
+		padding-top: 60px;
+		padding-bottom: 40px;
+		height: 100%;
+	}
+}

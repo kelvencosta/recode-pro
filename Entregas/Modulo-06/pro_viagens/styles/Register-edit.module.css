@@ -1,0 +1,69 @@
+.div {
+    background-color: rgb(112, 78, 207);
+}
+
+.registrationForm form{
+    background-color: #fff;
+    max-width: 750px;
+    margin: auto;
+    padding: 45px 70px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: 1px solid rgb(78, 207, 179);
+    box-shadow: 1px 2px 10px rgb(78, 207, 179);
+}
+
+.registrationForm .formIcon{
+	text-align: center;
+    background-color: rgb(112, 78, 207);
+    border-radius: 50%;
+    font-size: 44px;
+    color: white;
+    width: 105px;
+    height: 105px;
+    margin: auto;
+    margin-bottom: 30px;
+    line-height: 100px;
+}
+
+.registrationForm .item{
+	border-radius: 20px;
+    margin-bottom: 16px;
+    padding: 10px 10px;
+}
+
+.itemMod{
+	border-radius: 20px;
+    margin-bottom: 2px;
+    padding: 9px 10px;
+}
+
+.registrationForm .createAccount{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(112, 78, 207);
+    border: none;
+    color: white;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.registrationForm .createAccount:hover {
+    background-color: rgb(78, 207, 179);
+}
+
+@media (max-width: 776px) {
+    .registrationForm form{
+        padding: 20px 20px;
+        max-width: 400px;
+    }
+
+    .registrationForm .formIcon{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+    }
+}
