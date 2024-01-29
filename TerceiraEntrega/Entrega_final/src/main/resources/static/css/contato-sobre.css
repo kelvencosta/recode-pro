@@ -1,0 +1,104 @@
+
+
+.container {
+    padding-top: 100px;
+    display: flex;
+    height: 100%;
+    padding-bottom: 15px;
+}
+
+
+.container-fluid {
+    padding-top: 100px;
+    display: grid;
+    grid-template-rows: auto 5vh;
+    min-height: 100vh;
+
+    grid-template-areas: " main"
+        " footer";
+}
+
+
+
+/*----------------*/
+
+/* Formulário página de contato*/
+#Formulario {
+    padding-top: 50px;
+    width: 50%;
+    max-width: 500px;
+    font-size: 22px;
+    font-weight: 50;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, #1A3FAD 34%, #ffd468 81%, #FAC63E 100%);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.form {
+    flex: 1;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, #FAC63E 34%, #ffd468 81%, #ffd468 100%);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image,
+    .form {
+        flex: initial;
+        width: 100%;
+    }
+}
+
+/*fim contato */
+/*página sobre nós*/
+.clearfix {
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+#visao,
+#sobre,
+#missao,
+#valores {
+    max-width: 50%;
+    border-radius: 20px;
+    background-color: #1A3FAD;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#visao,
+#sobre,
+#missao,
+#valores>h2 {
+    text-align: center;
+}
+
+.clearfix>img {
+
+    padding: 20px;
+    border-radius: 40px;
+
+}
+

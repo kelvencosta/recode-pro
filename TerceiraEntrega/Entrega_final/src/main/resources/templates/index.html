@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <title>Despertar Cursos</title>
+    <link rel="stylesheet" th:href="@{../css/index.css}">
+    <link rel="stylesheet" th:href="@{../css/global.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+    </header>
+    <main>
+        <section class="banner">
+            <h1>Construa seu Futuro</h1>
+            <p>Trilhe Seu Caminho para um Futuro Promissor com Nossos Cursos</p>
+            <a th:href="@{/cursos}" class="cta-button">Ver Cursos</a>
+        </section>
+
+        <!--Section informações do site-->
+        <section class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                        <div class="position-relative h-100">
+                            <img class="img-principal" src="../img/modelo.png" style="object-fit: cover;" alt="estudante">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="section-title position-relative mb-4">
+                            <h6 class="d-inline-block position-relative text-destaque  pb-2">OBJETIVOS</h6>
+                            <h1 class="display-4">Primeira escolha para educação on-line em qualquer lugar</h1>
+                        </div>
+                        <p>
+                            Seja bem-vindo à sua primeira escolha para educação online, onde o conhecimento encontra a
+                            comodidade em qualquer lugar! Nosso compromisso é oferecer uma experiência educacional que
+                            transcende limites geográficos, permitindo que você aprenda no seu próprio ritmo, onde quer
+                            que esteja.
+                        </p>
+                        <div class="row pt-3 mx-0">
+                            <div class="col-3 px-0">
+                                <div class="bg-success text-center p-4">
+                                    <h1 class="text-white" data-toggle="counter-up">423</h1>
+                                    <h6 class="text-uppercase text-white">avaliações<span class="d-block">alunos</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-3 px-0">
+                                <div class="bg-primary text-center p-4">
+                                    <h1 class="text-white" data-toggle="counter-up">200</h1>
+                                    <h6 class="text-uppercase text-white">Cursos<span class="d-block">Online</span></h6>
+                                </div>
+                            </div>
+                            <div class="col-3 px-0">
+                                <div class="bg-secondary text-center p-4">
+                                    <h1 class="text-white" data-toggle="counter-up">123</h1>
+                                    <h6 class="text-uppercase text-white">INSTRUTORES<span
+                                            class="d-block">escalados</span></h6>
+                                </div>
+                            </div>
+                            <div class="col-3 px-0">
+                                <div class="bg-warning text-center p-4">
+                                    <h1 class="text-white taxa" data-toggle="counter-up">84</h1>
+                                    <h6 class="text-uppercase text-white">taxa<span class="d-block">empregados</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Section cards-->
+        <section class="container-cards">
+            <h1 class="text-destaque h1-curso d-inline-block">Cursos</h1>
+            <div class="cards row row-cols-1 row-cols-md-2 g-2">
+                <div class="card" style="
+                color: #f70d0d;
+                background-color: rgba(255, 0, 0, 0.185)">
+                    <a th:href="@{/cursos}"><img src="/img/category_icon_5.png" width="70px" alt="Tipos de Cursos"></a>
+                    <p>Medicina</p>
+                </div>
+                <div class="card" style="
+                    color: #31af36;
+                    background-color: rgba(0, 255, 8, 0.178);">
+
+                    <a th:href="@{/cursos}"><img src="/img/category_icon_1.png" width="70px" alt="Tipos de Cursos"></a>
+                    <p>Línguas</p>
+                </div>
+                <div class="card" style="
+                        color: #f9990a;
+                        background-color: rgba(249, 153, 10, 0.178);">
+                    <a th:href="@{/cursos}"><img src="/img/category_icon_3.png" width="70px" alt="Tipos de Cursos"></a>
+                    <p>Business</p>
+                </div>
+                <div class="card" style="
+                        color: #00a3ff;
+                        background-color: rgba(0, 162, 255, 0.178);">
+                    <a th:href="@{/cursos}"><img src="/img/category_icon_2.png" width="70px" alt="Tipos de Cursos"></a>
+                    <p>Tecnologia</p>
+                </div>
+                <div class="card" style="
+                        color: #ee2c82;
+                        background-color: rgba(238, 44, 131, 0.178);">
+                    <a th:href="@{/cursos}"><img src="/img/category_icon_4.png" width="70px" alt="Tipos de Cursos"></a>
+                    <p>Matemática </p>
+                </div>
+            </div>
+        </section>
+        <section class="container-comentarios" data-bs-ride="carousel">
+            <h1 class="h1-depoimentos">Depoimentos</h1>
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h5 class="comentarios h6 ">"Minha trajetória profissional deu uma guinada depois dos cursos da
+                            Despertar cursos. Me sinto mais preparado para os desafios do mercado agora"
+                        </h5>
+                        <div class="perfil-comentario">
+                            <img src="/img/modelo-02.jpg" class="foto-comentario" alt="Depoimentos">
+                            <div class="nome-perfil">Gustavo Pinheiro</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="comentarios">"Mudar de carreira parecia assustador, até que o curso de Desenvolvedor
+                            da Despertar me deu o conhecimento e a coragem necessários para dar o salto."</div>
+                        <div class="perfil-comentario">
+                            <img src="/img/modelo-03.png" class="foto-comentario" alt="depoimento">
+                            <div class="nome-perfil">Fernando Alves</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="comentarios">"Os cursos não apenas atualizou meu conhecimento, mas também me deu
+                            insights valiosos que transformaram minha abordagem no trabalho."</div>
+                        <div class="perfil-comentario">
+                            <img src="/img/modelo-04.png" height="42px" class="foto-comentario" alt="depoimento">
+                            <div class="nome-perfil">André Pereira</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="text-center">&copy; Squad 21 - Recode Pro 2023</p>
+    </footer>
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

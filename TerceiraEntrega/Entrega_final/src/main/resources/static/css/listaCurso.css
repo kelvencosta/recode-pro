@@ -1,0 +1,24 @@
+
+
+		.botaoc {
+			background-color: #FAC53E;
+			border-color: #FAC53E;
+		}
+
+		.botaoc:hover {
+			background-color: #AD7F09;
+			border-color: #AD7F09;
+		}
+
+		.tempo {
+			color: #3E6DFA;
+		}
+
+		.tituloc {
+			color: #1A3FAD;
+		}
+		.matriculado {
+			background-color: #4CAF50;
+			border-color: #4CAF50;
+			cursor: not-allowed;
+		}

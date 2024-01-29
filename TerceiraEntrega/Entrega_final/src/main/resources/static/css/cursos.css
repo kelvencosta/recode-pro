@@ -1,0 +1,34 @@
+.botaoc{
+    background-color: #FAC53E;
+    border-color: #FAC53E;
+}
+.botaoc:hover{
+    background-color: #AD7F09;
+    border-color: #AD7F09;
+}
+
+.tempo{
+    color: #3E6DFA;
+}
+
+.tituloc{
+    color: #1A3FAD;
+}
+#botao {
+  text-align: end;  
+}
+
+.btn {
+  margin: 5px;
+}
+
+.container{
+  margin-top: 90px;
+}
+
+.card{
+  width: 18rem;
+}
+p{
+  text-align: justify;
+}

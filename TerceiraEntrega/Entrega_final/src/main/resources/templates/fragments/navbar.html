@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Navbar</title>
+	<link rel="stylesheet" th:href="@{../css/global.css}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+
+<body>
+	<nav th:fragment="navbar" class="navbar navbar-expand-lg text-white" id="navColor">
+		<a class="navbar-brand text-white" th:href=" @{/}">
+			<img src="/img/logo-icon.png" alt="logo" width="45" height="40" class="d-inline-block align-text-top">
+			Despertar Cursos |
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse m-auto" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link text-white" aria-current="page" th:href="@{/alunos/cadastro}"
+						sec:authorize="isAnonymous()">Cadastro</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" th:href="@{/login}" sec:authorize="isAnonymous()">Login</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" th:href="@{/cursos}">Cursos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" th:href="@{/contato}">Contato</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" th:href="@{/sobre}">Sobre</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" th:href="@{/alunos}" sec:authorize="hasRole('ADMIN')">Usuários</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" th:href="@{/logout}" sec:authorize="isAuthenticated()">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</body>
